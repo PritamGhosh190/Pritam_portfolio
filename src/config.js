@@ -1,6 +1,8 @@
 import { Home, User, Smartphone, Send } from "lucide-react";
 import freellyImg from "./assets/freelly.png";
 import Feliz from "./assets/feliz.png";
+import BhooterRaja from "./assets/BhuterRaja.jpeg";
+import MBAcupid from "./assets/mbaCupid.png";
 
 /* =========================================================================
    CUSTOMIZE ME
@@ -65,7 +67,7 @@ export const MOBILE_PROJECTS = [
     description:
       "MBA Cupid is an exclusive matchmaking platform connecting elite business school graduates from institutions like the IIMs, ISB, and XLRI for serious relationships and marriage. Tailored for high-achieving professionals, the app offers verified profiles, intelligent matchmaking, interactive forums, and instant push notifications to help ambitious leaders find compatible life partners in a safe, private space.",
     tech: ["React Native", "Redux Toolkit", "Firebase", "Google Maps API","SQLite" ],
-    image: "https://play-lh.googleusercontent.com/tggM11k3ahcH4T_LODUNzIgql_cexB9LdnslT4h11EMpEojAUyPL3t5GmRlEVu76eI6dxhWR_Ujd5u6oNAtsdv4=w526-h296-rw",
+    image: MBAcupid,
     year: "2023",
     link: "#",
   },
@@ -76,7 +78,7 @@ export const MOBILE_PROJECTS = [
     description:
       "Bhooter Raja Dilo Bor** in Jadavpur is a beloved dining destination that brings authentic Bengali cuisine to life through the nostalgic theme of the classic film *Goopy Gyne Bagha Byne*. Blending cultural heritage with traditional recipes, the restaurant offers iconic signature dishes like Shukto, Shorshe Ilish, Chingri Malai Curry, Daab Chingri, Bhetki Paturi, and Raj Bari Kosha Mangsho, alongside classic desserts like Mishti Doi and Rosogolla. With high-quality ingredients, hygienic practices, a homely ambiance, and value-for-money meals, Bhooter Raja Dilo Bor serves more than just food—it delivers rich memories, warm hospitality, and an authentic taste of Bengal.",
     tech: ["React Native", "Redux Toolkit", "Firebase", "Google Maps API","SQLite"],
-    image: "https://play-lh.googleusercontent.com/TvPyGZBbBEjW8-i-8wusLXYNcsEZpNm44yLu4RpUvEoYyUd3XPsJ6OmXDNYjRpDIF1nnxyFjiS3dWA7CYdhejQ=w2560-h1440-rw",
+    image: BhooterRaja,
     year: "2024",
     link: "https://play.google.com/store/apps/details?id=com.bhooter_raja&hl=en_IN",
   },
