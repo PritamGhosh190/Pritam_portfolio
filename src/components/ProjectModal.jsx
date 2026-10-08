@@ -1,10 +1,31 @@
-import React from "react";
-import { X, ArrowUpRight } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { X, ArrowUpRight, CircleAlert } from "lucide-react";
 import { colors } from "../config";
 import { Chip } from "./UIBits";
 
 export function ProjectModal({ project, variant, onClose }) {
+  const [showUnavailableNotice, setShowUnavailableNotice] = useState(false);
+
+  useEffect(() => {
+    if (!showUnavailableNotice) return undefined;
+
+    const timeoutId = window.setTimeout(() => setShowUnavailableNotice(false), 4500);
+    return () => window.clearTimeout(timeoutId);
+  }, [showUnavailableNotice]);
+
+  useEffect(() => {
+    setShowUnavailableNotice(false);
+  }, [project?.id]);
+
   if (!project) return null;
+
+  const liveUrl = typeof project.link === "string" ? project.link.trim() : "";
+  const hasLiveUrl = Boolean(liveUrl && liveUrl !== "#");
+  const liveHref = hasLiveUrl
+    ? /^https?:\/\//i.test(liveUrl)
+      ? liveUrl
+      : `https://${liveUrl}`
+    : undefined;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
@@ -94,15 +115,50 @@ export function ProjectModal({ project, variant, onClose }) {
               <Chip key={t}>{t}</Chip>
             ))}
           </div>
-          <a
-            href={project.link.startsWith("http") ? project.link : "#"}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 mt-6 px-4 py-2.5 rounded-lg text-sm font-medium transition-transform hover:scale-105"
-            style={{ backgroundColor: colors.coral, color: colors.ink }}
-          >
-            View live <ArrowUpRight size={15} />
-          </a>
+          {hasLiveUrl ? (
+            <a
+              href={liveHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 mt-6 px-4 py-2.5 rounded-lg text-sm font-medium transition-transform hover:scale-105"
+              style={{ backgroundColor: colors.coral, color: colors.ink }}
+            >
+              View live <ArrowUpRight size={15} />
+            </a>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setShowUnavailableNotice(true)}
+              className="inline-flex items-center gap-2 mt-6 px-4 py-2.5 rounded-lg text-sm font-medium transition-transform hover:scale-105"
+              style={{ backgroundColor: colors.coral, color: colors.ink }}
+            >
+              View live <ArrowUpRight size={15} />
+            </button>
+          )}
+
+          {showUnavailableNotice && (
+            <div
+              role="status"
+              aria-live="polite"
+              className="availability-notice flex items-start gap-3 mt-4 rounded-xl p-4"
+              style={{
+                backgroundColor: colors.coralSoft,
+                border: `1px solid ${colors.coral}66`,
+              }}
+            >
+              <CircleAlert size={19} className="shrink-0 mt-0.5" style={{ color: colors.coral }} />
+              <div>
+                <p className="text-sm font-semibold" style={{ color: colors.text }}>
+                  {variant === "phone" ? "No Longer Available on Google Play" : "Website Currently Unavailable"}
+                </p>
+                <p className="text-sm mt-1" style={{ color: colors.muted }}>
+                  {variant === "phone"
+                    ? "This app is currently unavailable on Google Play. Please check back soon."
+                    : "The live website is currently unavailable. Please check back soon."}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

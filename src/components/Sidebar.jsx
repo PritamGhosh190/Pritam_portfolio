@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import devLogo from "../assets/devLogo.png";
 import { CONFIG, NAV_ITEMS, colors } from "../config";
 
 export function Sidebar() {
@@ -20,9 +21,10 @@ export function Sidebar() {
         <a
           href="#home"
           onClick={() => handleNavClick("home")}
-          className="text-base sm:text-lg font-bold tracking-tight shrink-0"
+          className="inline-flex items-center gap-2.5 text-base sm:text-lg font-bold tracking-tight shrink-0"
           style={{ color: colors.text }}
         >
+          {/* <img src={devLogo} alt="" className="w-10 h-10 object-contain shrink-0" /> */}
           {CONFIG.name}
         </a>
 

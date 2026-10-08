@@ -21,6 +21,13 @@ export function GlobalStyles() {
       @keyframes scaleIn { from { opacity: 0; transform: scale(0.92) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
       .modal-pop { animation: scaleIn 0.3s ease forwards; }
 
+      @keyframes noticePop { from { opacity: 0; transform: translateY(10px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      .availability-notice { animation: noticePop 0.28s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+      @keyframes metricFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+      .floating-metric { animation: metricFloat 3s ease-in-out infinite; }
+      .floating-metric-delayed { animation-delay: 1.2s; }
+
       @keyframes powerFlicker { 0% { opacity: 0; } 12% { opacity: 1; } 18% { opacity: 0.25; } 26% { opacity: 1; } 100% { opacity: 1; } }
       .device-flicker { animation: powerFlicker 0.7s ease; }
 
@@ -35,7 +42,7 @@ export function GlobalStyles() {
       @keyframes dotsAnim { 0% { content: ''; } 25% { content: '.'; } 50% { content: '..'; } 75% { content: '...'; } 100% { content: ''; } }
 
       @media (prefers-reduced-motion: reduce) {
-        .resume-drawer, .modal-pop, .device-flicker, .pdf-fade-in, .loading-bar, .type-cursor, .loading-dots::after {
+        .resume-drawer, .modal-pop, .availability-notice, .floating-metric, .device-flicker, .pdf-fade-in, .loading-bar, .type-cursor, .loading-dots::after {
           animation: none !important;
         }
       }

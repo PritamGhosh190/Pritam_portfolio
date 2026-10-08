@@ -58,6 +58,8 @@ export const MOBILE_PROJECTS = [
     tech: ["React Native", "Redux Toolkit", "Firebase", "Google Maps API"],
     image: freellyImg,
     year: "2024",
+    downloads: "5K+",
+    // rating: "4.8",
     link: "https://play.google.com/store/apps/details?id=com.freellyapp&hl=en_IN",
   },
   {
@@ -69,7 +71,9 @@ export const MOBILE_PROJECTS = [
     tech: ["React Native", "Redux Toolkit", "Firebase", "Google Maps API","SQLite" ],
     image: MBAcupid,
     year: "2023",
-    link: "#",
+    downloads: "1.5K+",
+    // rating: "4.8",
+    link: null,
   },
   {
     id: "m3",
@@ -80,6 +84,8 @@ export const MOBILE_PROJECTS = [
     tech: ["React Native", "Redux Toolkit", "Firebase", "Google Maps API","SQLite"],
     image: BhooterRaja,
     year: "2024",
+    downloads: "1K+",
+    // rating: "4.8",
     link: "https://play.google.com/store/apps/details?id=com.bhooter_raja&hl=en_IN",
   },
   {
@@ -91,7 +97,9 @@ export const MOBILE_PROJECTS = [
     tech: ["React Native", "Redux Toolkit", "Firebase", "Google Maps API","SQLite"],
     image: Feliz,
     year: "2024",
-    link: "https://www.feliz.health/#",
+     downloads: "1.5K+",
+    // rating: "4.8",.2
+    link: null,
   },
 ];
 
@@ -105,7 +113,7 @@ export const WEB_PROJECTS = [
     tech: ["Next.js", "React JS", "Tailwind CSS", "PostgreSQL"],
     image: "https://placehold.co/900x560/0B1120/4FD1C5?text=TaskFlow&font=roboto",
     year: "2025",
-    link: "taskflow.yourname.dev",
+    link: null,
   },
   {
     id: "w2",
