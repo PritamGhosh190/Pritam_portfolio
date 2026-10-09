@@ -3,6 +3,8 @@ import freellyImg from "./assets/freelly.png";
 import Feliz from "./assets/feliz.png";
 import BhooterRaja from "./assets/BhuterRaja.jpeg";
 import MBAcupid from "./assets/mbaCupid.png";
+import Akunah from "./assets/akunahMe.jpeg";
+import Arya from "./assets/arya.jpeg";
 
 /* =========================================================================
    CUSTOMIZE ME
@@ -101,6 +103,32 @@ export const MOBILE_PROJECTS = [
     // rating: "4.8",.2
     link: null,
   },
+  {
+    id: "m5",
+    name: "Akunah me",
+    tagline: "Empowering Your Healthcare Journey.",
+    description:
+      "Akunah is your all-in-one app for smarter, patient-focused healthcare management.Securely store, manage, and share your medical records and documents.Connect with your doctors through direct messages and video communication.Stay updated with scheduled appointments and important medical information.Track your treatment progress and monitor your recovery journey.Access meaningful health scores to better understand your recovery.Receive personalised insights to support informed healthcare decisions.Explore Akunah MED for valuable medical education and resources.Stay connected with your healthcare providers throughout your treatment.",
+    tech: ["React Native", "Redux Toolkit", "Firebase", "Google Maps API","SQLite"],
+    image: Akunah,
+    year: "2023",
+     downloads: "100+",
+    rating: "5.0",
+    link: "https://play.google.com/store/apps/details?id=com.akunahme&hl=en_IN",
+  },
+  {
+    id: "m6",
+    name: "Akunah arya",
+    tagline: "Capture Ideas. Create Clarity.",
+    description:
+      "Akunah Arya is a smart productivity app designed to simplify professional documentation. Record your voice and convert speech into text with live transcription. Create structured notes and documents from your recordings. Capture important ideas and information effortlessly. Generate valuable insights to support your daily workflow. Organise and manage your notes for easy future access. Securely share documents and information with others. Enjoy multilingual voice recording and transcription support. Improve productivity by reducing manual documentation efforts. **Akunah Arya — Capture Ideas. Create Clarity.",
+    tech: ["React Native", "Redux Toolkit", "Firebase", "Google Maps API","SQLite"],
+    image: Arya,
+    year: "2026",
+     downloads: "10+",
+    rating: "5.0",
+    link: "https://play.google.com/store/apps/details?id=com.akunahtemp&hl=en_IN",
+  },
 ];
 
 export const WEB_PROJECTS = [
@@ -126,28 +154,7 @@ export const WEB_PROJECTS = [
     year: "2024",
     link: "shopsphere.yourname.dev",
   },
-  {
-    id: "w3",
-    name: "DevBlog CMS",
-    tagline: "A headless blog editors actually enjoy",
-    description:
-      "Headless CMS + Next.js front end with MDX-powered posts, live preview and incremental static regeneration so new posts go live in seconds.",
-    tech: ["Next.js", "MDX", "Sanity", "TypeScript"],
-    image: "https://placehold.co/900x560/0B1120/4FD1C5?text=DevBlog+CMS&font=roboto",
-    year: "2024",
-    link: "devblog.yourname.dev",
-  },
-  {
-    id: "w4",
-    name: "Portfolio Builder",
-    tagline: "Drag, drop, publish — no code required",
-    description:
-      "A drag-and-drop site builder for personal portfolios with live-editable sections and one-click static export, built entirely in React with Tailwind CSS.",
-    tech: ["React JS", "Tailwind CSS", "HTML5", "CSS3"],
-    image: "https://placehold.co/900x560/0B1120/F0B429?text=Portfolio+Builder&font=roboto",
-    year: "2023",
-    link: "buildmyportfolio.dev",
-  },
+  
 ];
 
 export const NAV_ITEMS = [

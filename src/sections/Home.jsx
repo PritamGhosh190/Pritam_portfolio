@@ -15,13 +15,12 @@ const SKILLS = [
   "HTML5",
   "CSS",
   "JavaScript",
-  "Node.js",
   "React",
+  "Next.js",
   "Git",
   "GitHub",
   "TypeScript",
   "Tailwind CSS",
-  "MongoDB",
 ];
 
 function SkillsMarquee({ skills = SKILLS, speedSeconds = 24 }) {
